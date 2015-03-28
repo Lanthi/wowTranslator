@@ -14,14 +14,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Wow Translator.exe.manifest" size="5094">
+    <dependentAssembly dependencyType="install" codebase="Wow Translator.exe.manifest" size="4624">
       <assemblyIdentity name="Wow Translator.exe" version="2.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1MRaTSLezVXAZUJuQiMqeySCDc/gtnO7pZ+Ap/HLB3c=</dsig:DigestValue>
+        <dsig:DigestValue>KXR0ruEBH2CfT88ak7PgtJ364IDnfQ6t0MPyAY28Hwg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
