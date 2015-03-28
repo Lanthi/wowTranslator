@@ -30,3 +30,8 @@ C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTran
 C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.TrustInfo.xml
 C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.exe.manifest
 C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.application
+C:\Users\Lanthi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Interop.SHDocVw.dll
+C:\Users\Lanthi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator 2.0.vbproj.ResolveComReference.cache
+C:\Users\Lanthi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.exe
+C:\Users\Lanthi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.xml
+C:\Users\Lanthi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.pdb
