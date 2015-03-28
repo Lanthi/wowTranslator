@@ -8,3 +8,5 @@ C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Tra
 C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.pdb
 C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\bin\Debug\Wow Translator 2.0.pdb
 C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\bin\Debug\Wow Translator 2.0.xml
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Debug\Interop.SHDocVw.dll
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.vbproj.ResolveComReference.cache
