@@ -24,3 +24,19 @@ C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Tran
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.exe
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.xml
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.pdb
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Interop.SHDocVw.dll
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.vbproj.ResolveComReference.cache
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\bin\Debug\Wow Translator.exe.manifest
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\bin\Debug\Wow Translator.application
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\bin\Debug\Wow Translator.exe
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\bin\Debug\Wow Translator.pdb
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\bin\Debug\Wow Translator.xml
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow_Translator_2._0.Form1.resources
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow_Translator_2._0.Resources.resources
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.vbproj.GenerateResource.Cache
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.TrustInfo.xml
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.exe.manifest
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.application
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.exe
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.xml
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\wowTranslator\Wow Translator 2.0\obj\Debug\Wow Translator.pdb
