@@ -1,0 +1,10 @@
+c:\users\cristi\documents\visual studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\bin\Debug\Wow Translator 2.0.exe
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\bin\Debug\Wow Translator 2.0.exe.config
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow_Translator_2._0.Form1.resources
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow_Translator_2._0.Resources.resources
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.vbproj.GenerateResource.Cache
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.exe
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.xml
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\obj\Debug\Wow Translator 2.0.pdb
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\bin\Debug\Wow Translator 2.0.pdb
+C:\Users\cristi\Documents\Visual Studio 2013\Projects\Wow Translator 2.0\Wow Translator 2.0\bin\Debug\Wow Translator 2.0.xml
