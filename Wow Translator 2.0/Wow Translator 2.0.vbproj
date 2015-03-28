@@ -24,8 +24,11 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\</InstallUrl>
+    <ProductName>WOW Translator 2.0</ProductName>
+    <PublisherName>Lanthi</PublisherName>
+    <SuiteName>Wow translator</SuiteName>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
