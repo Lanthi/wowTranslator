@@ -396,21 +396,10 @@ Public Class Form1
                 If chkLang05.CheckState = CheckState.Checked Then txtobj05.Text = ""
                 'Español
                 If chkLang06.CheckState = CheckState.Checked Then
-                    If My.Computer.FileSystem.FileExists(Archivo_temp6) Then My.Computer.FileSystem.DeleteFile(Archivo_temp6)
-                    My.Computer.Network.DownloadFile("http://es.wowhead.com/object=" & ID, Archivo_temp6)
-                    Dim datos6 As New StreamReader(Archivo_temp6)
-                    TextBox9.Text = datos6.ReadToEnd
-                    datos6.Close()
-                    SearchWithinThis = TextBox9.Text
-                    SearchForThis = "<h1 class="
-                    SearchForThis2 = "</h1>"
-                    FirstCharacter = SearchWithinThis.IndexOf(SearchForThis)
-                    FirstCharacter2 = SearchWithinThis.IndexOf(SearchForThis2)
-                    If FirstCharacter > 0 Then
-                        txtobj06.Text = Mid(SearchWithinThis, FirstCharacter + 28, FirstCharacter2 - FirstCharacter - 27)
-                    Else
-                        txtobj06.Text = ""
-                    End If
+                    TextBox1.Text = ""
+                    txtobj06.Text = Name
+                    txtobj06.Text = Replace(txtobj06.Text, "&#039;", "´")
+                    txtobj06.Text = Replace(txtobj06.Text, "'", "´")
                 End If
                 'Español latino
                 If chkLang07.CheckState = CheckState.Checked Then txtobj07.Text = txtobj06.Text
@@ -437,7 +426,7 @@ Public Class Form1
                 End If
             End If
             If txtobj02.Text <> txtobj05.Text Then
-                If Microsoft.VisualBasic.Left(txtobj02.Text, 1) <> "[" Then
+                If Microsoft.VisualBasic.Left(txtobj06.Text, 1) <> "[" Then
                     TextBox7.Text = TextBox7.Text & vbCrLf & "INSERT INTO `locales_gameobject` VALUES (" & ID & ",'" & txtobj01.Text & "','" & txtobj02.Text & "','" & txtobj03.Text & "','" & txtobj04.Text & "','" & txtobj05.Text & "','" & txtobj06.Text & "','" & txtobj07.Text & "','" & txtobj08.Text & "','','','','','','','','','18019');"
                     Añadidos = Añadidos + 1
                     Label4.Text = "Añadidos = " & Añadidos
@@ -449,28 +438,30 @@ Public Class Form1
                 End If
                 Me.Refresh()
                 Application.DoEvents()
-             End If
+                If My.Computer.FileSystem.FileExists(Obj_temp) Then My.Computer.FileSystem.DeleteFile(Obj_temp)
+                TextBox6.Text = Mid(TextBox6.Text, Posicion)
+                Contador = Contador + 1
+                If Contador > 50 Then
+                    Try
+                        Dim escritor As StreamWriter
+                        escritor = File.AppendText(Obj_temp)
+                        escritor.Write(TextBox6.Text)
+                        escritor.Flush()
+                        escritor.Close()
+                        'MessageBox.Show("Lote creado con éxito")
+                    Catch ex As Exception
+                        'MessageBox.Show("Escritura realizada incorrectamente")
+                    End Try
+                    Contador = 0
+                End If
+
+            End If
         Next
         Inicio = 1
-        Try
-            If My.Computer.FileSystem.FileExists(Obj_temp) Then My.Computer.FileSystem.DeleteFile(Obj_temp)
-            TextBox6.Text = Mid(TextBox6.Text, Posicion)
-            Dim escritor As StreamWriter
-            escritor = File.AppendText(Obj_temp)
-            escritor.Write(TextBox6.Text)
-            escritor.Flush()
-            escritor.Close()
-            ' MessageBox.Show("Lote creado con éxito")
-        Catch ex As Exception
-            ' MessageBox.Show("Escritura realizada incorrectamente")
-        End Try
+
         TextBox8.Text = ""
         TextBox8.Text = "--" & vbCrLf & "--      WOW Translator 2.0 generated the day " & Microsoft.VisualBasic.DateAndTime.DateValue(Now) & " - " & Microsoft.VisualBasic.DateAndTime.TimeValue(Now) & vbCrLf & "-- -----------------------------------------------------------------" & vbCrLf & vbCrLf & "--       Full database: " & Total & ", missing : " & Ignorado & ", added :" & Añadido & "      By Lanthi" & vbCrLf & TextBox7.Text
         Call Guardar("Obj")
-        If My.Computer.FileSystem.FileExists(Archivo_temp2) Then My.Computer.FileSystem.DeleteFile(Archivo_temp2)
-        If My.Computer.FileSystem.FileExists(Archivo_temp3) Then My.Computer.FileSystem.DeleteFile(Archivo_temp3)
-        If My.Computer.FileSystem.FileExists(Archivo_temp6) Then My.Computer.FileSystem.DeleteFile(Archivo_temp6)
-        If My.Computer.FileSystem.FileExists(Archivo_temp8) Then My.Computer.FileSystem.DeleteFile(Archivo_temp8)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

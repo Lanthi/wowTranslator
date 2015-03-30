@@ -378,7 +378,6 @@ Partial Class Form1
         '
         'txtobj08
         '
-        Me.txtobj08.Enabled = False
         Me.txtobj08.Location = New System.Drawing.Point(119, 202)
         Me.txtobj08.Name = "txtobj08"
         Me.txtobj08.Size = New System.Drawing.Size(107, 20)
@@ -386,7 +385,6 @@ Partial Class Form1
         '
         'txtobj07
         '
-        Me.txtobj07.Enabled = False
         Me.txtobj07.Location = New System.Drawing.Point(121, 176)
         Me.txtobj07.Name = "txtobj07"
         Me.txtobj07.Size = New System.Drawing.Size(107, 20)
@@ -394,7 +392,6 @@ Partial Class Form1
         '
         'txtobj06
         '
-        Me.txtobj06.Enabled = False
         Me.txtobj06.Location = New System.Drawing.Point(121, 150)
         Me.txtobj06.Name = "txtobj06"
         Me.txtobj06.Size = New System.Drawing.Size(107, 20)
@@ -402,7 +399,6 @@ Partial Class Form1
         '
         'txtobj05
         '
-        Me.txtobj05.Enabled = False
         Me.txtobj05.Location = New System.Drawing.Point(119, 124)
         Me.txtobj05.Name = "txtobj05"
         Me.txtobj05.Size = New System.Drawing.Size(107, 20)
@@ -410,7 +406,6 @@ Partial Class Form1
         '
         'txtobj04
         '
-        Me.txtobj04.Enabled = False
         Me.txtobj04.Location = New System.Drawing.Point(7, 202)
         Me.txtobj04.Name = "txtobj04"
         Me.txtobj04.Size = New System.Drawing.Size(107, 20)
@@ -418,7 +413,6 @@ Partial Class Form1
         '
         'txtobj03
         '
-        Me.txtobj03.Enabled = False
         Me.txtobj03.Location = New System.Drawing.Point(7, 176)
         Me.txtobj03.Name = "txtobj03"
         Me.txtobj03.Size = New System.Drawing.Size(107, 20)
@@ -426,7 +420,6 @@ Partial Class Form1
         '
         'txtobj02
         '
-        Me.txtobj02.Enabled = False
         Me.txtobj02.Location = New System.Drawing.Point(6, 150)
         Me.txtobj02.Name = "txtobj02"
         Me.txtobj02.Size = New System.Drawing.Size(107, 20)
@@ -434,7 +427,6 @@ Partial Class Form1
         '
         'txtobj01
         '
-        Me.txtobj01.Enabled = False
         Me.txtobj01.Location = New System.Drawing.Point(6, 124)
         Me.txtobj01.Name = "txtobj01"
         Me.txtobj01.Size = New System.Drawing.Size(107, 20)
