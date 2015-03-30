@@ -51,3 +51,14 @@ C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Tr
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.exe
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.xml
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.pdb
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\bin\Release\Wow Translator.exe.manifest
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\bin\Release\Wow Translator.application
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\bin\Release\Wow Translator.exe
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\bin\Release\Wow Translator.pdb
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\bin\Release\Wow Translator.xml
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow_Translator_2._0.Form1.resources
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow_Translator_2._0.Resources.resources
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator 2.0.vbproj.GenerateResource.Cache
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.TrustInfo.xml
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.exe.manifest
+C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.application

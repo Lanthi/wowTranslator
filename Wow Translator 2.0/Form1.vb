@@ -449,27 +449,21 @@ Public Class Form1
                 End If
                 Me.Refresh()
                 Application.DoEvents()
-                If My.Computer.FileSystem.FileExists(Obj_temp) Then My.Computer.FileSystem.DeleteFile(Obj_temp)
-                TextBox6.Text = Mid(TextBox6.Text, Posicion)
-                Contador = Contador + 1
-                If Contador > 50 Then
-                    Try
-                        Dim escritor As StreamWriter
-                        escritor = File.AppendText(Obj_temp)
-                        escritor.Write(TextBox6.Text)
-                        escritor.Flush()
-                        escritor.Close()
-                        'MessageBox.Show("Lote creado con éxito")
-                    Catch ex As Exception
-                        'MessageBox.Show("Escritura realizada incorrectamente")
-                    End Try
-                    Contador = 0
-                End If
-
             End If
         Next
         Inicio = 1
-
+        If My.Computer.FileSystem.FileExists(Obj_temp) Then My.Computer.FileSystem.DeleteFile(Obj_temp)
+        TextBox6.Text = Mid(TextBox6.Text, Posicion)
+        Try
+            Dim escritor As StreamWriter
+            escritor = File.AppendText(Obj_temp)
+            escritor.Write(TextBox6.Text)
+            escritor.Flush()
+            escritor.Close()
+            'MessageBox.Show("Lote creado con éxito")
+        Catch ex As Exception
+            'MessageBox.Show("Escritura realizada incorrectamente")
+        End Try
         TextBox8.Text = ""
         TextBox8.Text = "--" & vbCrLf & "--      WOW Translator 2.0 generated the day " & Microsoft.VisualBasic.DateAndTime.DateValue(Now) & " - " & Microsoft.VisualBasic.DateAndTime.TimeValue(Now) & vbCrLf & "-- -----------------------------------------------------------------" & vbCrLf & vbCrLf & "--       Full database: " & Total & ", missing : " & Ignorado & ", added :" & Añadido & "      By Lanthi" & vbCrLf & TextBox7.Text
         Call Guardar("Obj")
