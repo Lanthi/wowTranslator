@@ -396,10 +396,21 @@ Public Class Form1
                 If chkLang05.CheckState = CheckState.Checked Then txtobj05.Text = ""
                 'Español
                 If chkLang06.CheckState = CheckState.Checked Then
-                    TextBox1.Text = ""
-                    txtobj06.Text = Name
-                    txtobj06.Text = Replace(txtobj06.Text, "&#039;", "´")
-                    txtobj06.Text = Replace(txtobj06.Text, "'", "´")
+                    If My.Computer.FileSystem.FileExists(Archivo_temp6) Then My.Computer.FileSystem.DeleteFile(Archivo_temp6)
+                    My.Computer.Network.DownloadFile("http://ru.wowhead.com/object=" & ID, Archivo_temp6)
+                    Dim datos6 As New StreamReader(Archivo_temp6)
+                    TextBox9.Text = datos6.ReadToEnd
+                    datos6.Close()
+                    SearchWithinThis = TextBox9.Text
+                    SearchForThis = "<h1 class="
+                    SearchForThis2 = "</h1>"
+                    FirstCharacter = SearchWithinThis.IndexOf(SearchForThis)
+                    FirstCharacter2 = SearchWithinThis.IndexOf(SearchForThis2)
+                    If FirstCharacter > 0 Then
+                        txtobj06.Text = Mid(SearchWithinThis, FirstCharacter + 28, FirstCharacter2 - FirstCharacter - 27)
+                    Else
+                        txtobj06.Text = ""
+                    End If
                 End If
                 'Español latino
                 If chkLang07.CheckState = CheckState.Checked Then txtobj07.Text = txtobj06.Text
