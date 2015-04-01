@@ -75,6 +75,7 @@ Partial Class Form1
         Me.chkLang02 = New System.Windows.Forms.CheckBox()
         Me.chkLang01 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -611,22 +612,36 @@ Partial Class Form1
         Me.CheckBox1.Text = "Subir"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Blue
+        Me.Button5.Location = New System.Drawing.Point(23, 365)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 31)
+        Me.Button5.TabIndex = 27
+        Me.Button5.Text = "Salir"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(862, 367)
+        Me.ClientSize = New System.Drawing.Size(862, 400)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "WOW Traductor 2.0"
         Me.GroupBox1.ResumeLayout(False)
@@ -691,5 +706,6 @@ Partial Class Form1
     Friend WithEvents chkLang02 As System.Windows.Forms.CheckBox
     Friend WithEvents chkLang01 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
 
 End Class

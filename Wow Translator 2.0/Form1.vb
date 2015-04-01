@@ -7,15 +7,21 @@ Public Class Form1
     Dim Total As Integer = 0
     Dim Inicio As Integer
     Dim Fin As Integer
+    Dim UltimoItem As Integer = 0
+    Dim UltimoObj As Integer = 0
     Dim Archivo_temp2 As String = "fr.dat" 'frances
     Dim Archivo_temp3 As String = "de.dat" 'aleman
     Dim Archivo_temp6 As String = "es.dat" 'español
     Dim Archivo_temp8 As String = "ru.dat" 'ruso
     Dim Obj_temp As String = "objetos.txt"
+    Dim DatosItem As New StreamReader("\Datos\Item.dat")
+    Dim DatosObj As New StreamReader("\Datos\Obj.dat")
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Contador As Integer = 0
         Dim I As Integer
+        Button5.Enabled = False
         Inicio = Val(TextBox2.Text)
         Fin = Val(TextBox3.Text)
         Añadido = 0
@@ -42,7 +48,8 @@ Public Class Form1
         GroupBox3.Enabled = False
         For I = Inicio To Fin
             If Parar = True Then Exit For
-          
+            TextBox2.Text = DatosItem.ReadToEnd
+            DatosItem.Close()
             Label1.Text = I
             Me.Refresh()
             Application.DoEvents()
@@ -155,11 +162,14 @@ Public Class Form1
                         Me.Refresh()
                         Contador = Contador + 1
                         If Contador >= 2000 Then
-                            Total = Contador
+                            Total = Contador + I
                             Contador = 0
+                            UltimoItem = Total
                             TextBox5.Text = ""
                             TextBox5.Text = "--" & vbCrLf & "--      WOW Translator 2.0 generated the day " & Microsoft.VisualBasic.DateAndTime.DateValue(Now) & " - " & Microsoft.VisualBasic.DateAndTime.TimeValue(Now) & vbCrLf & "-- -----------------------------------------------------------------" & vbCrLf & vbCrLf & "--       Full database: " & Total & ", missing : " & Ignorado & ", added :" & Añadido & "      By Lanthi" & vbCrLf & "TRUNCATE locales_item;" & vbCrLf & TextBox4.Text
                             Call Guardar("Item")
+                            TextBox4.Text = ""
+                            Inicio = I
                         End If
                     Else
                         txtlang01.Text = ""
@@ -253,20 +263,38 @@ Public Class Form1
             Ruta = Tipo & " - " & Microsoft.VisualBasic.DateAndTime.Day(Now) & "-" & Microsoft.VisualBasic.DateAndTime.Month(Now) & "-" & Microsoft.VisualBasic.DateAndTime.Year(Now) & " (" & Inicio & " -- " & Total & ").sql"
 
             Dim escritor As StreamWriter
+            Dim escritor1 As StreamWriter
             escritor = File.AppendText(Ruta)
+
             Select Case Tipo
-                Case "Item" : escritor.Write(TextBox5.Text)
-                Case "Obj" : escritor.Write(TextBox8.Text)
+                Case "Item"
+                    If My.Computer.FileSystem.FileExists("\Datos\Item.dat") Then My.Computer.FileSystem.DeleteFile("\Datos\Item.dat")
+                    escritor.Write(TextBox5.Text)
+                    escritor1 = File.AppendText("\Datos\Item.dat")
+                    escritor1.Write(UltimoItem)
+                Case "Obj"
+                    If My.Computer.FileSystem.FileExists("\Datos\Obj.dat") Then My.Computer.FileSystem.DeleteFile("\Datos\Obj.dat")
+                    escritor.Write(TextBox8.Text)
+                    escritor1 = File.AppendText("Datos\Obj.dat")
+                    escritor1.Write(UltimoObj)
                 Case Else
             End Select
             escritor.Flush()
             escritor.Close()
+            escritor1.Flush()
+            escritor1.Close()
             'MessageBox.Show("Lote creado con éxito")
-            If CheckBox1.CheckState = CheckState.Checked Then My.Computer.Network.UploadFile(Ruta, "ftp://lanthipiso.ddns.net/Wow%20Translator%202.0/Wow%20Translator%202.0/bin/Release/" & Ruta, "Lanthi", "3507042", True, 500)
+            If CheckBox1.CheckState = CheckState.Checked Then
+                My.Computer.Network.UploadFile(Ruta, "ftp://lanthipiso.ddns.net/Wow%20Translator%202.0/Wow%20Translator%202.0/bin/Release/" & Ruta, "Lanthi", "3507042", True, 500)
+                My.Computer.Network.UploadFile(Ruta, "ftp://lanthipiso.ddns.net/Wow%20Translator%202.0/Wow%20Translator%202.0/bin/Release/Datos/Item.dat", "Lanthi", "3507042", True, 500)
+                My.Computer.Network.UploadFile(Ruta, "ftp://lanthipiso.ddns.net/Wow%20Translator%202.0/Wow%20Translator%202.0/bin/Release/Datos/Obj.dat", "Lanthi", "3507042", True, 500)
+
+            End If
         Catch ex As Exception
             'MessageBox.Show("Escritura realizada incorrectamente")
         End Try
         Guardar = True
+        Button5.Enabled = True
     End Function
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Parar = True
@@ -293,6 +321,8 @@ Public Class Form1
             GroupBox2.Enabled = False
 
         End If
+        TextBox2.Text = DatosItem.ReadToEnd
+        DatosItem.Close()
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -310,6 +340,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Button5.Enabled = False
         RadioButton1.Enabled = False
         RadioButton2.Enabled = False
         Button3.Enabled = False
@@ -479,5 +510,9 @@ Public Class Form1
         Button4.Enabled = False
 
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        End
     End Sub
 End Class
