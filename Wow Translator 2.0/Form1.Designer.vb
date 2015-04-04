@@ -333,8 +333,8 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
         Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.TextBox7)
         Me.GroupBox2.Location = New System.Drawing.Point(611, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(239, 354)
@@ -481,10 +481,10 @@ Partial Class Form1
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(12, 275)
+        Me.TextBox8.Location = New System.Drawing.Point(12, 245)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(130, 42)
+        Me.TextBox8.Size = New System.Drawing.Size(175, 95)
         Me.TextBox8.TabIndex = 16
         '
         'GroupBox3

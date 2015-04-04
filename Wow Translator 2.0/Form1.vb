@@ -14,8 +14,8 @@ Public Class Form1
     Dim Archivo_temp6 As String = "es.dat" 'español
     Dim Archivo_temp8 As String = "ru.dat" 'ruso
     Dim Obj_temp As String = "objetos.txt"
-    Dim DatosItem As New StreamReader("\Datos\Item.dat")
-    Dim DatosObj As New StreamReader("\Datos\Obj.dat")
+    Dim DatosItem As New StreamReader(Application.StartupPath & "\Datos\Item.dat")
+    Dim DatosObj As New StreamReader(Application.StartupPath & "\Datos\Obj.dat")
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -46,10 +46,12 @@ Public Class Form1
         RadioButton1.Enabled = False
         RadioButton2.Enabled = False
         GroupBox3.Enabled = False
+        Dim DatosItem As New StreamReader(Application.StartupPath & "\Datos\Item.dat")
+        TextBox2.Text = DatosItem.ReadToEnd
+        DatosItem.Close()
+
         For I = Inicio To Fin
             If Parar = True Then Exit For
-            TextBox2.Text = DatosItem.ReadToEnd
-            DatosItem.Close()
             Label1.Text = I
             Me.Refresh()
             Application.DoEvents()
@@ -226,6 +228,7 @@ Public Class Form1
         Label3.Text = "Omitidos : 0"
         Label2.Text = "Añadido: 0"
         Total = I
+        UltimoItem = Total
         TextBox5.Text = " Añadidos : " & Añadido & " Omitidos : " & Ignorado & " Total : " & Total
         GroupBox3.Enabled = True
         If My.Computer.FileSystem.FileExists(Archivo_temp2) Then My.Computer.FileSystem.DeleteFile(Archivo_temp2)
@@ -264,26 +267,30 @@ Public Class Form1
 
             Dim escritor As StreamWriter
             Dim escritor1 As StreamWriter
+            Dim escritor2 As StreamWriter
             escritor = File.AppendText(Ruta)
 
             Select Case Tipo
                 Case "Item"
-                    If My.Computer.FileSystem.FileExists("\Datos\Item.dat") Then My.Computer.FileSystem.DeleteFile("\Datos\Item.dat")
                     escritor.Write(TextBox5.Text)
-                    escritor1 = File.AppendText("\Datos\Item.dat")
-                    escritor1.Write(UltimoItem)
                 Case "Obj"
-                    If My.Computer.FileSystem.FileExists("\Datos\Obj.dat") Then My.Computer.FileSystem.DeleteFile("\Datos\Obj.dat")
                     escritor.Write(TextBox8.Text)
-                    escritor1 = File.AppendText("Datos\Obj.dat")
-                    escritor1.Write(UltimoObj)
                 Case Else
             End Select
             escritor.Flush()
             escritor.Close()
+            If My.Computer.FileSystem.FileExists(Application.StartupPath & "\Datos\Item.dat") Then My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\Datos\Item.dat")
+            escritor1 = File.AppendText(Application.StartupPath & "\Datos\Item.dat")
+            escritor1.Write(UltimoItem)
             escritor1.Flush()
             escritor1.Close()
-            'MessageBox.Show("Lote creado con éxito")
+            If My.Computer.FileSystem.FileExists(Application.StartupPath & "\Datos\Obj.dat") Then My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\Datos\Obj.dat")
+            escritor2 = File.AppendText(Application.StartupPath & "Datos\Obj.dat")
+            escritor2.Write(UltimoObj)
+            escritor2.Flush()
+            escritor2.Close()
+
+            MessageBox.Show("Lote creado con éxito")
             If CheckBox1.CheckState = CheckState.Checked Then
                 My.Computer.Network.UploadFile(Ruta, "ftp://lanthipiso.ddns.net/Wow%20Translator%202.0/Wow%20Translator%202.0/bin/Release/" & Ruta, "Lanthi", "3507042", True, 500)
                 My.Computer.Network.UploadFile(Ruta, "ftp://lanthipiso.ddns.net/Wow%20Translator%202.0/Wow%20Translator%202.0/bin/Release/Datos/Item.dat", "Lanthi", "3507042", True, 500)
@@ -497,6 +504,7 @@ Public Class Form1
         Catch ex As Exception
             'MessageBox.Show("Escritura realizada incorrectamente")
         End Try
+        UltimoObj = Total
         TextBox8.Text = ""
         TextBox8.Text = "--" & vbCrLf & "--      WOW Translator 2.0 generated the day " & Microsoft.VisualBasic.DateAndTime.DateValue(Now) & " - " & Microsoft.VisualBasic.DateAndTime.TimeValue(Now) & vbCrLf & "-- -----------------------------------------------------------------" & vbCrLf & vbCrLf & "--       Full database: " & Total & ", missing : " & Ignorado & ", added :" & Añadido & "      By Lanthi" & vbCrLf & TextBox7.Text
         Call Guardar("Obj")
