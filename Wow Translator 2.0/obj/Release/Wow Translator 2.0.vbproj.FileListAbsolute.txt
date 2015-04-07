@@ -62,3 +62,13 @@ C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Tr
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.TrustInfo.xml
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.exe.manifest
 C:\Users\cristi\Source\Repos\wowTranslator\Wow Translator 2.0\obj\Release\Wow Translator.application
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Interop.SHDocVw.dll
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator 2.0.vbproj.ResolveComReference.cache
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator.exe
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator.xml
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator.pdb
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow_Translator_2._0.Form1.resources
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow_Translator_2._0.Resources.resources
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator 2.0.vbproj.GenerateResource.Cache
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator.TrustInfo.xml
+\\livebox\discosUSB\USB_DISK_2.0\partition1\Wow Translator 2.0\Wow Translator 2.0\obj\Release\Wow Translator.exe.manifest

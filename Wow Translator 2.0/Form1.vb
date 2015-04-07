@@ -31,7 +31,8 @@ Public Class Form1
         TextBox3.Enabled = False
         Parar = False
         Button2.Enabled = True
-        ProgressBar1.Maximum = Fin - Inicio + 1
+        ProgressBar1.Maximum = Fin + 1 'Fin - Inicio + 1
+        ProgressBar1.Value = Inicio
         TextBox4.Text = ""
         TextBox5.Text = ""
         Button1.Enabled = False
